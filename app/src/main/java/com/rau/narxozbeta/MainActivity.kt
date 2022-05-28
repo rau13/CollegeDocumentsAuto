@@ -71,31 +71,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-         /*if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R){
-             if (Environment.isExternalStorageManager()) {
-                 Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show()
-
-             }else {
-                 val intent = Intent()
-                 intent.action = Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
-                 val uri: Uri = Uri.fromParts("package", this.packageName, null)
-                 intent.data = uri
-                 startActivity(intent)
-             }
-        }else{
-             ActivityCompat.requestPermissions(
-                 this, arrayOf(
-                     READ_EXTERNAL_STORAGE,
-                     permission.MANAGE_EXTERNAL_STORAGE
-                 ),
-                 1
-             )
-             val intent = Intent()
-             intent.action = Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
-             val uri: Uri = Uri.fromParts("package", this.packageName, null)
-             intent.data = uri
-             startActivity(intent)
-        }*/
+       
 
         val txtEmail = findViewById<EditText>(R.id.EmailAddress)
         val button = findViewById<ImageView>(R.id.button)
@@ -103,19 +79,7 @@ class MainActivity : AppCompatActivity() {
         val code_numbers = findViewById<EditText>(R.id.code_numbers)
 
         button2.setVisibility(View.GONE)
-        /*if (Environment.isExternalStorageManager()) {
-            Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show()
-
-            }
-// If you don't have access, launch a new activity to show the user the system's dialog
-// to allow access to the external storage
-        else {
-            val intent = Intent()
-            intent.action = Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
-            val uri: Uri = Uri.fromParts("package", this.packageName, null)
-            intent.data = uri
-            startActivity(intent)
-        }*/
+       
 
     button.setOnClickListener {
         val email: String = txtEmail.text.toString()
@@ -144,34 +108,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    private fun loginRequest(email: String, password: String) {
-        val url:String = "http://192.168.100.185/LoginRegister/login.php"
-        val requestQueue: RequestQueue = Volley.newRequestQueue(this)
-        val stringRequest: StringRequest =object: StringRequest(Request.Method.POST,url, Response.Listener { response ->
-            //Intent to Dashboard Activity
-            if(response.trim().equals("Login success")){
-                Toast.makeText(this,"Welcome", Toast.LENGTH_LONG).show()
-
-            }else{
-                Toast.makeText(this,"Check username or password", Toast.LENGTH_LONG).show()
-            }
-        }, Response.ErrorListener { error ->
-            //Toast Error
-            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        }){
-            override fun getParams(): MutableMap<String, String> {
-                val params = HashMap<String,String>()
-                params.put("email",email)
-                params.put("password",password)
-                return params
-            }
-        }
-        requestQueue.add(stringRequest)
-    }
+   
     private fun emailVerify(email:String){
         code = (1000..8999).random()
 
-        val url:String = "https://narxozapp.000webhostapp.com/email.php"
+        val url:String = "link to php(webhost)"
         val requestQueue: RequestQueue = Volley.newRequestQueue(this)
         val stringRequest: StringRequest =object: StringRequest(Request.Method.POST,url, Response.Listener { response ->
             //Intent to Dashboard Activity
@@ -196,7 +137,7 @@ class MainActivity : AppCompatActivity() {
             this.finish()
         }
         else if(verify_code.equals(code.toString())){
-            addId("https://narxozapp.000webhostapp.com/spravka3.php")
+            addId("link to php(webhost)")
             val intent = Intent(this, Welcome::class.java)
             intent.putExtra("message_key", fullname);
             intent.putExtra("facultati", facultati)
@@ -216,7 +157,7 @@ class MainActivity : AppCompatActivity() {
         private fun getCourseDetails(email: String) {
 
             // url to post our data
-            val url: String = "https://narxozapp.000webhostapp.com/login_beta.php";
+            val url: String = "link to php(webhost)";
             val code_numbers = findViewById<EditText>(R.id.code_numbers)
             val button2 = findViewById<Button>(R.id.button3)
             val button = findViewById<ImageView>(R.id.button)
