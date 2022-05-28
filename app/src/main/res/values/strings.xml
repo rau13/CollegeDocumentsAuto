@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NarxozApp</string>
+    <string-array name="spravki">
+        <item>Справка об обучении в колледже</item>
+        <item>Приложение 6</item>
+        <item>Приложение 4</item>
+    </string-array>
+    <string-array name="spravki1">
+
+    </string-array>
+</resources>
