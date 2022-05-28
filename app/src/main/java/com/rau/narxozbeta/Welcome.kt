@@ -198,37 +198,7 @@ class Welcome : AppCompatActivity() {
             img.scaleAbsolute(492f, 210.75f)
             mDoc.add(img)
 
-            /*signature
-            val bm_signature = BitmapFactory.decodeResource(resources, R.drawable.screen_6)
-            val stream_signature = ByteArrayOutputStream()
-            bm_signature.compress(Bitmap.CompressFormat.PNG, 100, stream_signature)
-            var img_signature: Image? = null
-            val byteArray_signature = stream_signature.toByteArray()
-            img_signature = Image.getInstance(byteArray_signature)
-            img_signature.scaleAbsolute(49.31f, 23.27f)
-            img_signature.setAbsolutePosition(243.82f, 455.25f)
-            mDoc.add(img_signature)*/
-            /*stamp
-            val bm_stamp = BitmapFactory.decodeResource(resources, R.drawable.stamp_desgin)
-            val stream_stamp = ByteArrayOutputStream()
-            bm_stamp.compress(Bitmap.CompressFormat.PNG, 100, stream_stamp)
-            var img_stamp: Image? = null
-            val byteArray_stamp = stream_stamp.toByteArray()
-            img_stamp = Image.getInstance(byteArray_stamp)
-            img_stamp.scaleAbsolute(53.49f, 44.70f)
-            img_stamp.setAbsolutePosition(109.26f, 470.30f)
-            mDoc.add(img_stamp)*/
-            //qrcode
-
-            /*val qrcode_1 = BitmapFactory.decodeResource(resources, R.drawable.qrcode1)
-            val stream_qrcode1 = ByteArrayOutputStream()
-            qrcode_1.compress(Bitmap.CompressFormat.PNG, 100, stream_qrcode1)
-            var img_qrcode1: Image? = null
-            val byteArray_qrcode1 = stream_qrcode1.toByteArray()
-            img_qrcode1 = Image.getInstance(byteArray_qrcode1)
-            img_qrcode1.scaleAbsolute(56.25f, 59.96f)
-            img_qrcode1.setAbsolutePosition(36.0f, 304.08f)
-            mDoc.add(img_qrcode1)*/
+           
 
             val titleStyle = Font(fontNameBold, valueFontSize, Font.NORMAL, BaseColor.BLACK)
             addItem(mDoc, "СПРАВКА", Element.ALIGN_CENTER, titleStyle)
@@ -244,9 +214,7 @@ class Welcome : AppCompatActivity() {
                 valueStyle
             )
             addItem(mDoc, "     ", Element.ALIGN_MIDDLE, valueStyle)
-            //addItem(mDoc, "                 М.П", Element.ALIGN_MIDDLE, valueStyle)
-            //addItem(mDoc, "    ", Element.ALIGN_MIDDLE, valueStyle)
-            //addItem(mDoc, "                                         Генеральный директор                    Сатаев С.А", Element.ALIGN_MIDDLE, valueStyle)
+           
             addItem(mDoc, "    ", Element.ALIGN_MIDDLE, valueStyle)
             addItem(mDoc, "    ", Element.ALIGN_MIDDLE, valueStyle)
             addItem(
@@ -254,14 +222,13 @@ class Welcome : AppCompatActivity() {
                         "тел. 391-10-41, факс. 303-02-27\n", Element.ALIGN_MIDDLE, footer
             )
             addItem(mDoc, "    ", Element.ALIGN_MIDDLE, valueStyle)
-            //addItem(mDoc, "Данный документ согласно пункту 1 статьи 7 ЗРК от 7 января 2003 года N370-II «Об электронном документе и электронной цифровой подписи», удостоверенный посредством электронной цифровой подписи лица, имеющего полномочия на его подписание, равнозначен подписанному документу на бумажном носителе.",Element.ALIGN_MIDDLE, footer
-            //)
+           
 
-            //close document
+           
             mDoc.close()
             //show file saved message with file name and path
 
-            //Toast.makeText(this, "$mFileName.pdf\nis saved to\n$mFilePath", Toast.LENGTH_SHORT).show()
+            
         } catch (e: Exception) {
             Log.d("MyLog", "Error " + e)
         }
@@ -291,20 +258,9 @@ class Welcome : AppCompatActivity() {
             )
             val valueStyle = Font(fontNameClassic, valueFontSize, Font.NORMAL, BaseColor.BLACK)
             val footer = Font(fontNameClassic, 8f, Font.NORMAL, BaseColor.BLACK)
-//add author of the document (metadata)
-            mDoc.addAuthor("Narxoz")
-//add title to Document
-            //qrcode
 
-            /*val qrcode_2 = BitmapFactory.decodeResource(resources, R.drawable.qrcode2)
-            val stream_qrcode2 = ByteArrayOutputStream()
-            qrcode_2.compress(Bitmap.CompressFormat.PNG, 100, stream_qrcode2)
-            var img_qrcode2: Image? = null
-            val byteArray_qrcode2 = stream_qrcode2.toByteArray()
-            img_qrcode2 = Image.getInstance(byteArray_qrcode2)
-            img_qrcode2.scaleAbsolute(56.25f, 59.9632f)
-            img_qrcode2.setAbsolutePosition(36.0f, 353.264f)
-            mDoc.add(img_qrcode2)*/
+            mDoc.addAuthor("Narxoz")
+
 
 
             addItem(
@@ -339,14 +295,13 @@ class Welcome : AppCompatActivity() {
                 valueStyle
             )
             addItem(mDoc, "    ", Element.ALIGN_MIDDLE, valueStyle)
-            //addItem(mDoc, "Данный документ согласно пункту 1 статьи 7 ЗРК от 7 января 2003 года N370-II «Об электронном документе и электронной цифровой подписи», удостоверенный посредством электронной цифровой подписи лица, имеющего полномочия на его подписание, равнозначен подписанному документу на бумажном носителе.",Element.ALIGN_MIDDLE, footer
-            //)
+           
 
-            //close document
+           
             mDoc.close()
             //show file saved message with file name and path
 
-            //Toast.makeText(this, "$mFileName.pdf\nis saved to\n$mFilePath", Toast.LENGTH_SHORT).show()
+            
         } catch (e: Exception) {
             Log.d("MyLog", "Error " + e)
         }
@@ -377,16 +332,6 @@ class Welcome : AppCompatActivity() {
 
 //add author of the document (metadata)
             mDoc.addAuthor("Narxoz")
-//add title to Document
-            /*al qrcode_3 = BitmapFactory.decodeResource(resources, R.drawable.qrcode3)
-            val stream_qrcode3 = ByteArrayOutputStream()
-            qrcode_3.compress(Bitmap.CompressFormat.PNG, 100, stream_qrcode3)
-            var img_qrcode3: Image? = null
-            val byteArray_qrcode3 = stream_qrcode3.toByteArray()
-            img_qrcode3 = Image.getInstance(byteArray_qrcode3)
-            img_qrcode3.scaleAbsolute(56.25f, 59.9632f)
-            img_qrcode3.setAbsolutePosition(36.0f, 133.51f)
-            mDoc.add(img_qrcode3)*/
 
 
             val valueStyle = Font(fontNameClassic, valueFontSize, Font.NORMAL, BaseColor.BLACK)
@@ -439,14 +384,13 @@ class Welcome : AppCompatActivity() {
                 valueStyle
             )
             addItem(mDoc, "    ", Element.ALIGN_MIDDLE, valueStyle)
-            //addItem(mDoc, "Данный документ согласно пункту 1 статьи 7 ЗРК от 7 января 2003 года N370-II «Об электронном документе и электронной цифровой подписи», удостоверенный посредством электронной цифровой подписи лица, имеющего полномочия на его подписание, равнозначен подписанному документу на бумажном носителе.",Element.ALIGN_MIDDLE, footer
-            //)
+           
 
-            //close document
+           
             mDoc.close()
             //show file saved message with file name and path
 
-            //Toast.makeText(this, "$mFileName.pdf\nis saved to\n$mFilePath", Toast.LENGTH_SHORT).show()
+            
         } catch (e: Exception) {
             Log.d("MyLog", "Error " + e)
         }
@@ -484,7 +428,7 @@ class Welcome : AppCompatActivity() {
                 // the attachment
                 putExtra(Intent.EXTRA_STREAM, path)
                 // the mail subject
-                //putExtra(Intent.EXTRA_SUBJECT, "Справка для " + "$email")
+                
             }
             startActivity(Intent.createChooser(emailIntent, "Send email..."))
 
@@ -505,7 +449,7 @@ class Welcome : AppCompatActivity() {
             this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)
                 .toString() + "/" + filename
 
-        val javaMailApi = JavaMailAPI(this, "spravka@college-narxoz.kz",filename,"Справка",mFilePath,filename)
+        val javaMailApi = JavaMailAPI(this, "college gmail",filename,"Справка",mFilePath,filename)
         javaMailApi.execute()
     }
     fun getId(url: String) {
